@@ -4,7 +4,7 @@ A simple web-based music-app .A UI representation of a music app
 
 This is a beginner-friendly **frontend clone** of the YouTube Music mobile UI, created using **HTML**, **CSS**, and **JavaScript**. It showcases a clean interface with sections like Quick Picks, Speed Dial, and more — inspired by popular music streaming platforms.
 
-🔗 **Live Preview** (optional): _[Add link here if hosted on GitHub Pages or Netlify]_
+🔗 **Live Preview** : https://bantydreddy.github.io/Music-app/
 
 ---
 
@@ -25,8 +25,3 @@ This is a beginner-friendly **frontend clone** of the YouTube Music mobile UI, c
 - CSS3 (Flexbox + Media Queries)
 - JavaScript (scroll listener & UI interactivity)
 - Font Awesome Icons
-
----
-
-## 📂 Folder Structure
-
