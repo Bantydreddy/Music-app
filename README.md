@@ -1,27 +1,34 @@
-# Music-app
-A simple web-based music-app .A UI representation of a music app
-# 🎶 Music App (YouTube Music UI Clone)
+# song@
 
-This is a beginner-friendly **frontend clone** of the YouTube Music mobile UI, created using **HTML**, **CSS**, and **JavaScript**. It showcases a clean interface with sections like Quick Picks, Speed Dial, and more — inspired by popular music streaming platforms.
+A music app UI built in React + Vite as a UI-engineering exercise. It plays real 30-second previews from the free iTunes Search API (no key needed).
 
-🔗 **Live Preview** : https://bantydreddy.github.io/Music-app/
+## Features
 
----
+- App shell: top bar, collapsible sidebar, main pane, resizable "Up next" queue, player bar
+- Reusable building blocks: `Shelf`, `SongCard`, `SongRow`, `Chips`, `VirtualList`
+- Virtualised lists, so thousands of songs scroll smoothly
+- Shelves load lazily as you scroll
+- Player: seek, volume, repeat, shuffle, queue
+- Liked songs saved in the browser
+- Remembers sidebar state, queue width and volume
+- Responsive: sidebar becomes a bottom tab bar on phones
 
-## ✨ Features
+## Structure
 
-- ✅ Fully structured homepage UI
-- 🖼️ Quick Picks section with song metadata and thumbnails
-- ⚡ Speed Dial section for fast access to genre/mood-based music
-- 📱 Responsive layout on modern mobile screen sizes
-- 🔔 Custom icons using [Font Awesome](https://fontawesome.com)
-- 🎨 Styled with attention to spacing, flexbox, scrollable rows
+```
+src/
+  config.js                 moods and home shelves (add a shelf with one line)
+  api/music.js              the only file that talks to the API
+  hooks/                    useTracks, useDebounce, useInView, usePersistentState, useResizable
+  context/                  PlayerContext (audio, queue), LibraryContext (likes)
+  components/layout/        TopBar, Sidebar, PlayerBar, QueuePanel
+  components/ui/            Shelf, SongCard, SongRow, Chips, VirtualList, Logo, Status
+  pages/                    Home, Explore, Library
+```
 
----
+## Run it
 
-## 🧱 Built With
-
-- HTML5
-- CSS3 (Flexbox + Media Queries)
-- JavaScript (scroll listener & UI interactivity)
-- Font Awesome Icons
+```bash
+npm install
+npm run dev
+```
